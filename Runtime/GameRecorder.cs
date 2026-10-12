@@ -18,6 +18,8 @@ namespace GameRecorder
             {
                 Instantiate(prefab, Vector3.zero, Quaternion.identity, transform);
             }
+
+            DontDestroyOnLoad(gameObject);
         }
     }
 }
