@@ -1,0 +1,10 @@
+{
+  "name": "com.ddb.game.recorder",
+  "displayName": "ddb - Game Recorder",
+  "description": "Game Recorder",
+  "author": "datdb",
+  "version": "1.0.0",
+  "dependencies": {
+    "com.unity.recorder": "5.1.7"
+  }
+}
