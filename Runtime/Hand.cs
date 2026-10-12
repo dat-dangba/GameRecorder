@@ -31,6 +31,11 @@ namespace GameRecorder
                     trans.gameObject.SetActive(false);
                 }
             }
+
+            if (_handSpriteRenderer != null)
+            {
+                _handSpriteRenderer.sortingLayerName = "Hand";
+            }
         }
 
         private void Update()
