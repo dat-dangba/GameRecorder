@@ -4,6 +4,13 @@ namespace GameRecorder
 {
     public class GameRecorder : MonoBehaviour
     {
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        private static void OnBeforeSceneLoad()
+        {
+            GameObject gameObject = new GameObject("GameRecorder");
+            gameObject.AddComponent<GameRecorder>();
+        }
+
         private void Awake()
         {
             Hand prefab = Resources.Load<Hand>("Editor/Hand");
