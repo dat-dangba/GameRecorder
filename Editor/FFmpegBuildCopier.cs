@@ -23,7 +23,7 @@ namespace GameRecorder.Editor
                 return;
             }
 
-            string src = Path.Combine(pkg.resolvedPath, "Tools~", "ffmpeg.exe");
+            string src = Path.Combine("Packages/com.ddb.game.recorder", "Tools~", "ffmpeg.exe");
             if (!File.Exists(src))
             {
                 Debug.LogWarning($"[FFmpeg] Thiếu file: {src}");
