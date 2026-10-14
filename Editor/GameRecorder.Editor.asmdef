@@ -1,7 +1,9 @@
 {
     "name": "GameRecorder.Editor",
     "rootNamespace": "GameRecorder.Editor",
-    "references": [],
+    "references": [
+        "GUID:250e1344daab44bb2afeed4e20541ed7"
+    ],
     "includePlatforms": [
         "Editor"
     ],
