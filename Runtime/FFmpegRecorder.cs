@@ -27,7 +27,6 @@ namespace GameRecorder
 
         [Header("Audio")] [SerializeField] private bool recordAudio = true;
 
-        [Tooltip("Để trống thì tự tìm AudioListener và add AudioCapture vào đó.")] [SerializeField]
         private AudioCapture audioCapture;
 
         [Header("Control")] [SerializeField] private KeyCode toggleKey = KeyCode.F9;
@@ -69,6 +68,8 @@ namespace GameRecorder
 #if ENABLE_INPUT_SYSTEM && !ENABLE_LEGACY_INPUT_MANAGER
             if (Enum.TryParse(toggleKey.ToString(), out UnityEngine.InputSystem.Key k)) _key = k;
 #endif
+            audioCapture = FindAnyObjectByType<AudioCapture>();
+
             fps = PlayerPrefs.GetInt("record_fps", 30);
             flipVertical = PlayerPrefs.GetInt("record_vflip", 0) == 1;
             recordAudio = PlayerPrefs.GetInt("record_audio", 1) == 1;

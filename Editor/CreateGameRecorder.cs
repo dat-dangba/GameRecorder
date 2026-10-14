@@ -50,6 +50,9 @@ namespace GameRecorder.Editor
 
             Selection.activeGameObject = instance;
             EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
+
+            Camera cam = Object.FindAnyObjectByType<Camera>();
+            cam.gameObject.AddComponent<AudioCapture>();
         }
     }
 }
