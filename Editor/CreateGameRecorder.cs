@@ -26,7 +26,9 @@ namespace GameRecorder.Editor
                 return;
             }
 
-            Canvas canvas = Object.FindAnyObjectByType<Canvas>();
+            GameObject canvasGo = GameObject.Find("Canvas");
+            Canvas canvas = canvasGo != null ? canvasGo.GetComponent<Canvas>() : Object.FindAnyObjectByType<Canvas>();
+
             GameObject instance;
             if (canvas == null)
             {
