@@ -8,7 +8,6 @@ namespace GameRecorder
         [SerializeField] private UnityEvent _f5Event;
         [SerializeField] private UnityEvent _f6Event;
         [SerializeField] private UnityEvent _f7Event;
-        [SerializeField] private UnityEvent _f8Event;
 
         private KeyCode _f5 = KeyCode.F5;
         private KeyCode _f6 = KeyCode.F6;
