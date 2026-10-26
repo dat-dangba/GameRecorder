@@ -52,7 +52,11 @@ namespace GameRecorder.Editor
             EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
 
             Camera cam = Object.FindAnyObjectByType<Camera>();
-            cam.gameObject.AddComponent<AudioCapture>();
+            bool result = cam.gameObject.TryGetComponent(out AudioCapture component);
+            if (!result)
+            {
+                cam.gameObject.AddComponent<AudioCapture>();
+            }
         }
     }
 }
